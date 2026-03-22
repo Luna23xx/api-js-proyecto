@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Jujutsu Kaisen con Jocy</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/css/style.css?v=26">
+        <!--llamdo Jquery-->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+        <div id="modal-overlay">
+            <button id="modal-cerrar">✕</button>
+            <div id="modal-caja">
+                <img id="modal-imagen" src="" alt="">
+                <div id="modal-body">
+                    <h3 id="modal-titulo"></h3>
+                    <div id="modal-contenido"></div>
+                </div>
+            </div>
+        </div>
+        <header>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">JJK con Jocy</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link de interés</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Menú
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+            <div style="display:flex; align-items:center; justify-content:center; background-color:#1a1a1a; padding: 0.8rem 2rem; gap: 2rem;">
+                <img src="assets/img/logo.png" alt="Logo JJK con Jocy" style="height:150px; width:auto;">
+                <h1 style="margin:0; padding:0;">JUJUTSU KAISEN CON JOCY</h1>
+            </div>
+            <main class="blog">
+                <div id="buscador">
+                    <input type="text" id="input-buscar" class="form-control" placeholder="🔍 Buscar personaje, técnica...">
+                    <button id="btn-aceptar" class="btn btn-secondary ms-2" style="display:none;">Aceptar</button>
+                    <select id="filtro-seccion" class="form-control">
+                        <option value="todos">Todos</option>
+                        <option value="character">Personajes</option>
+                        <option value="movies">Películas</option>
+                        <option value="seasons">Temporadas</option>
+                        <option value="sequel">Secuela</option>
+                    </select>
+                </div>
+                <h2 class="top bottom"> Datos Personajes</h2>
+                    <section id="character" class="card-grid">
+                        
+                        <!--
+                            <div class="card">
+                                <img src="imagen.jpg" alt="Nombre personaje">
+                                <div class="card-content">
+                                    <h2>Nombre del personaje</h2>
+                                    <div class="info">
+                                        <p>Datos del personaje...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        -->
+                    </section>
+                        
+                <h2 class="top bottom">Películas</h2>
+                    <section id="movies" class="card-grid"></section>
+                    
+                            <!--
+                            <div class="card">
+                                <img src="imagen.jpg" alt="Nombre personaje">
+                                <div class="card-content">
+                                    <h2>Nombre del personaje</h2>
+                                    <div class="info">
+                                        <p>Datos del personaje...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        -->
+                    </section>
+                    
+                <h2 class="top bottom">Temporadas</h2>
+                    <section id="seasons" class="card-grid">
+                        
+                        <!--
+                            <div class="card">
+                                <img src="imagen.jpg" alt="Nombre personaje">
+                                <div class="card-content">
+                                    <h2>Nombre del personaje</h2>
+                                    <div class="info">
+                                        <p>Datos del personaje...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        -->
+                    </section>
+                    
+                    <h2 class="top bottom">Secuela</h2>
+                    <section id="sequel" class="card-grid">
+                        
+                        <!--
+                            <div class="card">
+                                <img src="imagen.jpg" alt="Nombre personaje">
+                                <div class="card-content">
+                                    <h2>Nombre del personaje</h2>
+                                    <div class="info">
+                                        <p>Datos del personaje...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        -->
+                    </section>
+                    
+                    <h2 class="top bottom">Técnicas Malditas</h2>
+                    <div id="contenedor-tecnicas"></div>
+                        <h2 class="top bottom">Gestionar Técnicas Malditas</h2>
+                            <div id="formulario-tecnica" style="max-width:600px; margin: 0 auto 2rem auto;">
+                                <input type="hidden" id="tecnica-id" value="">
+                                <div>
+                                    <label class="form-label" style="color:white;">Nombre de la técnica</label>
+                                    <input type="text" id="tecnica-titulo" class="form-control" placeholder="Ej: Expansión del territorio">
+                                </div>
+                                <div>
+                                    <label class="form-label" style="color:white;">Tipo de técnica</label>
+                                    <input type="text" id="tecnica-tipo" class="form-control" placeholder="Ej: Mukagen">
+                                </div>
+                                <div>
+                                    <label class="form-label" style="color:white;">Usuario</label>
+                                    <input type="text" id="tecnica-usuario" class="form-control" placeholder="Ej: Gojo Satoru">
+                                </div>
+                                <div>
+                                    <label class="form-label" style="color:white;">Escuela</label>
+                                    <input type="text" id="tecnica-escuela" class="form-control" placeholder="Ej: Escuela de Hechicería de Tokio">
+                                </div>
+                                <button id="btn-guardar" class="btn btn-success">Guardar técnica</button>
+                                <button id="btn-cancelar" class="btn btn-secondary ms-2" style="display:none;">Cancelar</button>
+                            </div>
+                                                    
+                    <h2 class="top bottom"> Objetos Malditos</h2>
+                    <div id= "contenedor-objetos"></div>
+                    
+                        
+            </main>
+            
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="assets/js/main.js"></script>
+        <footer class="top">
+            <p>Jujutsu Kaisen con Jocy @2026 Todos los derechos reservados</p>
+        </footer>
+    </body>
+</html>
